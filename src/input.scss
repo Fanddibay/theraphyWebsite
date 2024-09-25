@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Lora", serif;
+  background-color: #fff;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease forwards;
+}
+.slide-out {
+  animation: slideOut 0.5s ease forwards;
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.bgServices {
+  background-image: url(assets/ourServices.png);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgAboutUs {
+  background-image: url(assets/aboutUs.png);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ef9a4b; /* Adjust arrow background */
+  border: none;
+  padding: 10px;
+  font-size: 30px; /* Perbesar ukuran teks (ikon arrow) */
+  width: 50px !important; /* Sesuaikan lebar tombol */
+  height: 50px !important; /* Sesuaikan tinggi tombol */
+  background-color: #ef9a4b !important;
+  border-radius: 50%;
+  color: white !important;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  left: 24px; /* Position the previous arrow */
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  right: 24px; /* Position the next arrow */
+}
+
+.owl-carousel .owl-dot {
+  background-color: #ef9a4b; /* Custom color for pagination dots */
+}
+
+@layer components {
+  .supHeader a {
+    @apply hover:text-yellow-primary;
+  }
+
+  nav ul li a {
+    @apply text-green-primary hover:text-yellow-primary hover:underline;
+  }
+
+  .services {
+    @apply items-center  w-[200px]  h-[80px] content-center;
+  }
+  .services:nth-child(even) {
+    @apply bg-green-secondary rounded text-white;
+  }
+
+  .services:nth-child(odd) {
+    @apply bg-yellow-primary rounded text-white;
+  }
+
+  .approaches {
+    @apply bg-[#7A9797]  text-white lg:w-[250px] h-[100px] content-center px-4;
+  }
+
+  .pricingWhite {
+    @apply w-[300px] px-6 py-10 bg-white border border-[#D0D5DD] rounded;
+
+    .title {
+      h5 {
+        @apply text-green-primary font-bold text-2xl;
+      }
+
+      p {
+        @apply text-black-text text-sm;
+      }
+    }
+
+    .pricingFont {
+      @apply font-bold text-5xl text-black-text pt-4 pb-6;
+    }
+
+    .btnPricingPrimary {
+      @apply bg-green-primary text-white rounded px-16 py-4  hover:border-green-primary hover:border hover:text-green-primary hover:bg-transparent;
+    }
+
+    .pricelist {
+      .listprice {
+        @apply flex items-center gap-2;
+      }
+      .iconSuccess {
+        @apply bg-[#D1FAE5] rounded-full px-2 py-0.5;
+      }
+      p {
+        @apply text-black-text;
+      }
+    }
+  }
+
+  .pricingGreen {
+    @apply w-[300px] px-6 py-10 bg-green-primary rounded;
+
+    .title {
+      h5 {
+        @apply text-white font-bold text-2xl;
+      }
+
+      p {
+        @apply text-white text-sm;
+      }
+    }
+
+    .pricingFont {
+      @apply font-bold text-5xl text-white pt-4 pb-6;
+    }
+
+    .btnPricingPrimary {
+      @apply bg-white text-green-primary rounded px-16 py-4   hover:underline;
+    }
+
+    .pricelist {
+      .listprice {
+        @apply flex items-center gap-2;
+      }
+      .iconSuccess {
+        @apply bg-[#D1FAE5] rounded-full px-2 py-0.5;
+      }
+      p {
+        @apply text-white;
+      }
+    }
+  }
+
+  .owl-carousel {
+    div {
+      @apply mx-auto;
+    }
+  }
+
+  .socmed {
+    a {
+      @apply border border-green-primary rounded-full px-3.5 py-2 border-opacity-20 hover:bg-green-primary hover:text-white;
+    }
+  }
+
+  .privacy {
+    a {
+      @apply text-green-primary hover:underline;
+    }
+  }
+}

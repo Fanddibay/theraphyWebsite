@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theraphy For All</title>
+    <link rel="stylesheet" href="output.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+  </head>
+  <body>
+    <header class="py-4 bg-green-primary text-white">
+      <div class="mx-auto justify-center text-center grid gap-y-2 container">
+        <h5 class="text-xl">
+          Therapyf for Life, LLC & TFL Emotional Support Animal Services
+        </h5>
+        <p class="lg:hidden block">Licensed in: AL, FL, GA, IN, MI, OH, VA</p>
+        <div class="flex gap-4 items-center">
+          <p class="lg:block hidden">Licensed in: AL, FL, GA, IN, MI, OH, VA</p>
+          <div class="flex items-center gap-2 supHeader mx-auto">
+            <a href="#" class="flex items-center gap-2">
+              <i class="fa-solid fa-envelope"></i>
+              Support@theraphyforlife.com
+            </a>
+            |
+            <a href="#" class="flex items-center gap-2">
+              <i class="fa-solid fa-phone"></i>
+              574.876.9326
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="sticky top-0 border-b z-50 border-[#e2e2e2] bg-white">
+      <div
+        class="flex items-center justify-between mx-auto container px-6 py-4"
+      >
+        <img src="assets/logo.png" alt="Logo" />
+
+        <!-- Mobile menu button (hamburger) -->
+        <button
+          class="text-3xl md:hidden focus:outline-none"
+          onclick="toggleMenu()"
+        >
+          <i id="menuIcon" class="fas fa-bars"></i>
+        </button>
+
+        <!-- Menu items for large screens -->
+        <div class="hidden md:flex">
+          <ul class="flex items-center gap-6">
+            <li><a href="#" class="hover:text-green-primary">Home</a></li>
+            <li>
+              <a href="#" class="hover:text-green-primary">Our Services</a>
+            </li>
+            <li><a href="#" class="hover:text-green-primary">About Us</a></li>
+            <li><a href="#" class="hover:text-green-primary">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Sign In & Request Appointment buttons -->
+        <div class="hidden md:flex items-center gap-4">
+          <a
+            href="#"
+            class="text-green-primary hover:underline hover:text-green-950"
+            >Sign In</a
+          >
+          <a
+            href="#"
+            class="text-white bg-green-primary px-4 py-2 rounded-xl hover:bg-green-900 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-200"
+            >Request Appointment</a
+          >
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="navMenu" class="md:hidden hidden px-6 pt-4 py-8 slide-out">
+        <ul class="flex flex-col items-center gap-6">
+          <li><a href="#" class="hover:text-green-primary">Home</a></li>
+          <li><a href="#" class="hover:text-green-primary">Our Services</a></li>
+          <li><a href="#" class="hover:text-green-primary">About Us</a></li>
+          <li><a href="#" class="hover:text-green-primary">Contact</a></li>
+          <li>
+            <a
+              href="#"
+              class="text-green-primary hover:underline hover:text-green-950"
+              >Sign In</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white bg-green-primary px-6 py-4 rounded-xl hover:bg-green-900 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-200"
+              >Request Appointment</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- hero -->
+    <section class="">
+      <div
+        class="hero lg:flex items-center text-center lg:text-start justify-between px-12 gap-12 mt-12 mx-auto container"
+      >
+        <div>
+          <h3 class="text-5xl text-green-primary mb-4 font-bold">
+            Life is a balance of holding <br class="lg:block hidden" />
+            on and letting go. Let's do <br class="lg:block hidden" />
+            this together!
+          </h3>
+          <p class="text-[#9d9d9d] text-lg">
+            Need an ESA designation, life coach, or therapy? We specialize in
+            anxiety,<br class="lg:block hidden" />
+            trauma, life transitions, and more. Serving individuals, couples,
+            young adults,<br class="lg:block hidden" />
+            and students with a positive approach.
+          </p>
+          <div class="text-center justify-center w-[375px]">
+            <form action="#" class="flex mt-6">
+              <div class="relative flex items-center">
+                <input
+                  type="email"
+                  class="border-gray-300 border rounded-xl px-6 py-4 w-[375px]"
+                  placeholder="Enter email address"
+                />
+                <button
+                  type="submit"
+                  class="absolute right-2 bg-green-primary text-white py-2.5 px-6 rounded-lg hover:bg-green-900 focus:outline-none"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+            <p class="text-center my-4">or</p>
+            <a
+              href="#"
+              class="flex items-center gap-2 justify-center text-lg text-green-primary hover:underline"
+            >
+              <img src="assets/google.svg" alt="" />
+              Sign In with Google
+            </a>
+          </div>
+        </div>
+        <img src="assets/hero.png" class="mt-10 lg:mt-0" alt="" />
+      </div>
+    </section>
+
+    <!-- our services -->
+    <section class="bgServices mt-16" id="services">
+      <div class="container mx-auto py-12 text-center">
+        <p class="uppercase text-green-primary font-bold">Our Services</p>
+        <h5 class="text-5xl font-medium text-black-text">
+          Looking for Support Services? <br />
+          Better options for help are here!
+        </h5>
+        <div
+          class="grid lg:grid-cols-6 justify-items-center grid-cols-2 gap-6 px-4 mt-10 lg:px-16"
+        >
+          <div class="services">Axienty</div>
+          <div class="services">Trauma</div>
+          <div class="services">Relationship Issues</div>
+          <div class="services">Life Transitions</div>
+          <div class="services">Abandonment</div>
+          <div class="services">Parenting</div>
+          <div class="services">PTSD</div>
+          <div class="services">Military/Veteran's Issues</div>
+          <div class="services">College Mental Health</div>
+          <div class="services">Adjustment Disorder</div>
+          <div class="services">Abuse Survivors</div>
+          <div class="services">Support and Service Animal Therapy</div>
+          <div class="services lg:hidden block">Sports Performance</div>
+          <div class="services lg:hidden block">Mental Toughness Training</div>
+          <div class="services lg:hidden block col-span-2">Life Coaching</div>
+        </div>
+        <div class="lg:block hidden">
+          <div
+            class="mx-auto flex items-center gap-8 justify-center text-center center mt-8"
+          >
+            <div class="services">Sports Performance</div>
+            <div class="services">Mental Toughness Training</div>
+            <div class="services">Life Coaching</div>
+          </div>
+        </div>
+        <!-- approaches -->
+        <h5
+          class="text-black-text uppercase border-black-text border-b w-[300px] mx-auto mt-12 font-medium text-3xl"
+        >
+          Approaches
+        </h5>
+        <div class="grid lg:grid-cols-4 gap-4 mt-12 px-4 grid-cols-2 lg:px-32">
+          <div class="approaches">Cognitive Behavioral Therapy (CBT)</div>
+          <div class="approaches">Trauma Focused</div>
+          <div class="approaches">Narrative</div>
+          <div class="approaches">Solution Focused Brief (SFBT)</div>
+          <div class="approaches">Attachment-Based</div>
+          <div class="approaches">Coaching</div>
+          <div class="approaches">
+            Mindfulness-Based Stress Reduction (MBSR)
+          </div>
+          <div class="approaches">Family/Marital Therapy</div>
+        </div>
+        <a
+          href="#"
+          class="bg-white text-green-primary hover:bg-green-primary hover:text-white hover:border-white border border-green-primary rounded-xl px-8 py-4 mt-12 gap-4 flex items-center w-[250px] mx-auto"
+        >
+          <i class="fa-solid fa-calendar-days"></i>Request a Appointment
+        </a>
+      </div>
+    </section>
+
+    <!-- about us -->
+    <section id="aboutUs" class="bgAboutUs content-center p-12">
+      <div
+        class="bg-white/25 rounded-3xl backdrop-blur-[100px] p-4 lg:py-12 lg:px-24 container mx-auto"
+      >
+        <div
+          class="lg:grid lg:grid-cols-3 items-center mx-auto w-full lg:place-items-center"
+        >
+          <div class="grid gap-2 justify-center mx-auto container text-center">
+            <img src="assets/owner.png" alt="" />
+            <div class="text-center">
+              <h6 class="text-white text-2xl">Monrique Snelson</h6>
+              <p class="text-black-text text-sm">LMFT CCAPT</p>
+            </div>
+          </div>
+          <div class="grid gap-4 col-span-2 lg:w-[675px] mt-6 lg:mt-0">
+            <div>
+              <p class="text-green-primary text-sm text-center lg:text-start">
+                About
+              </p>
+              <h5
+                class="text-white font-medium text-5xl text-center lg:text-start"
+              >
+                Let's do this together!
+                <span class="text-yellow-primary">Meet the Founder</span>
+              </h5>
+            </div>
+            <p
+              class="text-white text-base text-center lg:text-justify leading-8"
+            >
+              Welcome to TFL! As a therapist, I’m privileged to work with
+              diverse clients and hear their stories. I specialize in anxiety,
+              OCD, trauma, relationships, sports, and professional performance.
+              I also offer life coaching, mental toughness training, and
+              emotional support animal letters. I work with individuals,
+              couples, and families, focusing on young adults, students, and
+              adults. My approach is holistic and collaborative, ensuring a
+              safe, empathetic space to support your goals. I'm licensed in
+              Alabama, Florida, Georgia, Indiana, Michigan, Ohio, and Virginia.
+              Please note, I’m a boutique practice and do not accept insurance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- pricing -->
+    <section id="pricing" class="my-12">
+      <div class="container mx-auto">
+        <div class="mx-auto text-center">
+          <p
+            class="bg-[#DFE6E6] w-[110px] mx-auto rounded-full text-green-secondary text-sm px-4 py-2"
+          >
+            Pricing plans
+          </p>
+          <h5 class="text-5xl font-semibold text-green-primary">
+            Plans for package Theraphy
+          </h5>
+        </div>
+        <div class="lg:block hidden">
+          <div class="lg:flex gap-4 grid px-12 mx-auto justify-center mt-12">
+            <!-- price 1 -->
+            <div class="pricingWhite">
+              <div class="title">
+                <h5>Individual Therapy</h5>
+                <p>
+                  Focused, personalized sessions for anxiety, OCD, trauma,and
+                  performance.
+                </p>
+              </div>
+              <h6 class="pricingFont">$175 - $200</h6>
+              <a href="#" class="btnPricingPrimary">Get Started Now</a>
+              <div class="pricelist grid gap-y-4 mt-12">
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>Personalized therapy for individuals.</p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Specializing in anxiety disorders, OCD, trauma, and
+                    relational issues.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>A holistic approach to ensure clients</p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Focus on professional and sports performance improvement.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>Available for both online and in-person sessions</p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Licensed to provide therapy in Alabama, Florida, Georgia,
+                    Indiana, Michigan, Ohio, and Virginia.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- price 2 -->
+            <div class="pricingWhite">
+              <div class="title">
+                <h5>Couple Therapy</h5>
+                <p>
+                  Therapy for couples to enhance relationships and
+                  communication.
+                </p>
+              </div>
+              <h6 class="pricingFont">$250 - $350</h6>
+              <a href="#" class="btnPricingPrimary">Get Started Now</a>
+              <div class="pricelist grid gap-y-4 mt-12">
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Therapy for couples, focusing on strengthening relationships
+                    and communication.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Addressing relational issues within the context of a
+                    relationship.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Collaborative approach to help couples achieve their shared
+                    goals.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    A safe space to discuss trauma or anxiety that affects the
+                    relationship.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Flexible scheduling for online and in-person sessions in
+                    licensed areas.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- price 3 -->
+            <div class="pricingGreen">
+              <div class="title">
+                <h5>Consultant Therapy</h5>
+                <p>
+                  Comprehensive consultations for anxiety, performance, and
+                  emotional.
+                </p>
+              </div>
+              <h6 class="pricingFont">$150 - $200</h6>
+              <a href="#" class="btnPricingPrimary">Get Started Now</a>
+              <div class="pricelist grid gap-y-4 mt-12">
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Therapy consultations for individuals or couples with a
+                    holistic approach.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Managing anxiety, professional performance, and sports
+                    performance.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Guidance on mental toughness and emotional resilience
+                    through in-depth consultations.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Therapy for OCD, trauma, and relational issues tailored to
+                    individual needs.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>Online or in-person sessions in licensed areas.</p>
+                </div>
+              </div>
+            </div>
+            <!-- price 4 -->
+            <div class="pricingWhite">
+              <div class="title">
+                <h5>Life Coaching</h5>
+                <p>
+                  Personal and professional growth coaching, with ESA letter
+                  support.
+                </p>
+              </div>
+              <h6 class="pricingFont">$150 - $300</h6>
+              <a href="#" class="btnPricingPrimary">Get Started Now</a>
+              <div class="pricelist grid gap-y-4 mt-12">
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Coaching for mental, emotional, and life resilience
+                    development.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    A collaborative approach to achieve personal and
+                    professional goals.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Focus on improving sports, professional performance, and
+                    mental well-being.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Support through flexible online or in-person sessions in
+                    licensed areas.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Emotional Support Animal (ESA) letters included as part of
+                    the program.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="lg:hidden mx-auto container justify-center text-center justify-items-center content-center place-self-center"
+        >
+          <!-- Owl Carousel for mobile (hidden on desktop) -->
+          <div class="owl-carousel owl-theme mt-8" id="pricing-carousel">
+            <!-- Slide 1 -->
+            <div class="pricingWhite item">
+              <div class="title">
+                <h5>Individual Therapy</h5>
+                <p>
+                  Focused, personalized sessions for anxiety, OCD, trauma,and
+                  performance.
+                </p>
+              </div>
+              <h6 class="pricingFont">$175 - $200</h6>
+              <a href="#" class="btnPricingPrimary">Get Started Now</a>
+              <div class="pricelist grid gap-y-4 mt-12">
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>Personalized therapy for individuals.</p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Specializing in anxiety disorders, OCD, trauma, and
+                    relational issues.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>A holistic approach to ensure clients</p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Focus on professional and sports performance improvement.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>Available for both online and in-person sessions</p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Licensed to provide therapy in Alabama, Florida, Georgia,
+                    Indiana, Michigan, Ohio, and Virginia.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="pricingWhite item">
+              <div class="title">
+                <h5>Couple Therapy</h5>
+                <p>
+                  Therapy for couples to enhance relationships and
+                  communication.
+                </p>
+              </div>
+              <h6 class="pricingFont">$250 - $350</h6>
+              <a href="#" class="btnPricingPrimary">Get Started Now</a>
+              <div class="pricelist grid gap-y-4 mt-12">
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Therapy for couples, focusing on strengthening relationships
+                    and communication.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Addressing relational issues within the context of a
+                    relationship.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Collaborative approach to help couples achieve their shared
+                    goals.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    A safe space to discuss trauma or anxiety that affects the
+                    relationship.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Flexible scheduling for online and in-person sessions in
+                    licensed areas.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="pricingGreen item">
+              <div class="title">
+                <h5>Consultant Therapy</h5>
+                <p>
+                  Comprehensive consultations for anxiety, performance, and
+                  emotional.
+                </p>
+              </div>
+              <h6 class="pricingFont">$150 - $200</h6>
+              <a href="#" class="btnPricingPrimary">Get Started Now</a>
+              <div class="pricelist grid gap-y-4 mt-12">
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Therapy consultations for individuals or couples with a
+                    holistic approach.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Managing anxiety, professional performance, and sports
+                    performance.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Guidance on mental toughness and emotional resilience
+                    through in-depth consultations.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Therapy for OCD, trauma, and relational issues tailored to
+                    individual needs.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>Online or in-person sessions in licensed areas.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="pricingWhite item">
+              <div class="title">
+                <h5>Life Coaching</h5>
+                <p>
+                  Personal and professional growth coaching, with ESA letter
+                  support.
+                </p>
+              </div>
+              <h6 class="pricingFont">$150 - $300</h6>
+              <a href="#" class="btnPricingPrimary">Get Started Now</a>
+              <div class="pricelist grid gap-y-4 mt-12">
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Coaching for mental, emotional, and life resilience
+                    development.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    A collaborative approach to achieve personal and
+                    professional goals.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Focus on improving sports, professional performance, and
+                    mental well-being.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Support through flexible online or in-person sessions in
+                    licensed areas.
+                  </p>
+                </div>
+                <div class="listprice">
+                  <div class="iconSuccess">
+                    <i class="fa-solid fa-check text-green-primary"></i>
+                  </div>
+                  <p>
+                    Emotional Support Animal (ESA) letters included as part of
+                    the program.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <section id="footer" class="bg-[#F5F5F5] container mx-auto">
+      <div class="text-center lg:py-12 py-8 px-4">
+        <div class="grid gap-y-4">
+          <h3 class="text-green-primary text-5xl font-semibold">
+            Therapyf for Life, LLC & TFL Emotional<br class="lg:block hidden" />
+            Support Animal Services
+          </h3>
+          <p class="text-base text-black-text text-opacity-80">
+            You have the right to receive a Good Faith Estimate of what your
+            services may cost. <br class="lg:block hidden" />
+            Licensed in: AL, FL, GA, IN, MI, OH, VA
+          </p>
+          <div class="my-10 flex gap-4 mx-auto items-center">
+            <a
+              href="#"
+              class="bg-white text-green-primary rounded-full px-4 py-2 hover:underline"
+              >👀 574.876.9326</a
+            >
+            <a
+              href="#"
+              class="bg-white text-green-primary rounded-full px-4 py-2 hover:underline"
+              >👋 Contact</a
+            >
+          </div>
+          <hr />
+          <div
+            class="lg:flex grid gap-y-4 items-center justify-center text-center mx-auto lg:mx-0 lg:justify-between pt-4"
+          >
+            <img
+              src="assets/logo.png"
+              class="justify-center mx-auto lg:mx-0"
+              alt=""
+            />
+            <div class="flex justify-center items-center gap-4 socmed">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="flex items-center gap-4 privacy">
+              <a href="#">Privacy</a>
+              |
+              <a href="#">Terms</a>
+              |
+              <a href="#">License Agreement</a>
+              |
+              <a href="#">Cookies</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-green-primary py-4">
+      <div class="mx-auto container text-white text-center">
+        © 2024 Theraphy for life. All Rights Reserved.
+      </div>
+    </footer>
+  </body>
+
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <!-- javascript -->
+  <script src="main.js"></script>
+</html>
