@@ -89,11 +89,11 @@ body {
     @apply items-center  w-[200px]  h-[80px] content-center;
   }
   .services:nth-child(even) {
-    @apply bg-green-secondary rounded text-white;
+    @apply bg-green-secondary rounded text-white hover:bg-black-text;
   }
 
   .services:nth-child(odd) {
-    @apply bg-yellow-primary rounded text-white;
+    @apply bg-yellow-primary rounded text-white hover:bg-black-text;
   }
 
   .approaches {
@@ -114,11 +114,11 @@ body {
     }
 
     .pricingFont {
-      @apply font-bold text-5xl text-black-text pt-4 pb-6;
+      @apply font-bold text-4xl lg:text-5xl text-black-text pt-4 pb-6;
     }
 
     .btnPricingPrimary {
-      @apply bg-green-primary text-white rounded px-16 py-4  hover:border-green-primary hover:border hover:text-green-primary hover:bg-transparent;
+      @apply bg-green-primary text-white rounded lg:px-16 px-12 py-4  hover:border-green-primary hover:border hover:text-green-primary hover:bg-transparent;
     }
 
     .pricelist {

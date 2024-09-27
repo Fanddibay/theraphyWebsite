@@ -619,12 +619,22 @@ nav ul li a:hover {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.services:nth-child(even):hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(61 61 61 / var(--tw-bg-opacity));
+}
+
 .services:nth-child(odd) {
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
   background-color: rgb(239 154 75 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.services:nth-child(odd):hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(61 61 61 / var(--tw-bg-opacity));
 }
 
 .approaches {
@@ -684,8 +694,8 @@ nav ul li a:hover {
     padding-bottom: 1.5rem;
   }
   .pricingFont {
-    font-size: 3rem;
-    line-height: 1;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
   .pricingFont {
     font-weight: 700;
@@ -693,6 +703,12 @@ nav ul li a:hover {
   .pricingFont {
     --tw-text-opacity: 1;
     color: rgb(61 61 61 / var(--tw-text-opacity));
+  }
+  @media (min-width: 1024px) {
+    .pricingFont {
+      font-size: 3rem;
+      line-height: 1;
+    }
   }
   .btnPricingPrimary {
     border-radius: 0.25rem;
@@ -702,8 +718,8 @@ nav ul li a:hover {
     background-color: rgb(39 85 85 / var(--tw-bg-opacity));
   }
   .btnPricingPrimary {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
   .btnPricingPrimary {
     padding-top: 1rem;
@@ -726,6 +742,12 @@ nav ul li a:hover {
   .btnPricingPrimary:hover {
     --tw-text-opacity: 1;
     color: rgb(39 85 85 / var(--tw-text-opacity));
+  }
+  @media (min-width: 1024px) {
+    .btnPricingPrimary {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
   }
   .pricelist {
     .listprice {
@@ -1141,8 +1163,8 @@ nav ul li a:hover {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-white\/25 {
-  background-color: rgb(255 255 255 / 0.25);
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
 }
 
 .p-12 {
@@ -1295,8 +1317,8 @@ nav ul li a:hover {
   --tw-text-opacity: 0.8;
 }
 
-.backdrop-blur-\[100px\] {
-  --tw-backdrop-blur: blur(100px);
+.backdrop-blur-md {
+  --tw-backdrop-blur: blur(12px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
@@ -1489,6 +1511,10 @@ body {
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:w-\[375px\] {
+    width: 375px;
   }
 
   .lg\:w-\[675px\] {
