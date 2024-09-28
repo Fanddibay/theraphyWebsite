@@ -25,7 +25,7 @@ $(document).ready(function () {
         items: 1, // For tablet, still show 1 item at a time
       },
       1000: {
-        items: 1, // Desktop also shows 1 item at a time
+        items: 2, // Desktop also shows 1 item at a time
       },
     },
   });

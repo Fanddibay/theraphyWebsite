@@ -27,21 +27,25 @@
   <body>
     <header class="py-4 bg-green-primary text-white">
       <div class="mx-auto justify-center text-center grid gap-y-2 container">
-        <h5 class="text-xl">
+        <h5 class="text-base md:text-xl">
           Therapyf for Life, LLC & TFL Emotional Support Animal Services
         </h5>
-        <p class="lg:hidden block">Licensed in: AL, FL, GA, IN, MI, OH, VA</p>
+        <p class="lg:hidden block text-base md:text-xl">
+          Licensed in: AL, FL, GA, IN, MI, OH, VA
+        </p>
         <div class="flex gap-4 items-center">
           <p class="lg:block hidden">Licensed in: AL, FL, GA, IN, MI, OH, VA</p>
           <div class="flex items-center gap-2 supHeader mx-auto">
             <a href="#" class="flex items-center gap-2">
               <i class="fa-solid fa-envelope"></i>
-              Support@theraphyforlife.com
+              <span class="text-sm md:text-xl">
+                Support@theraphyforlife.com</span
+              >
             </a>
             |
             <a href="#" class="flex items-center gap-2">
               <i class="fa-solid fa-phone"></i>
-              574.876.9326
+              <span class="text-sm md:text-xl"> 574.876.9326</span>
             </a>
           </div>
         </div>
@@ -51,18 +55,16 @@
       <div
         class="flex items-center justify-between mx-auto container px-6 py-4"
       >
-        <img src="assets/logo.png" width="250px" alt="Logo" />
-
-        <!-- Mobile menu button (hamburger) -->
-        <button
-          class="text-3xl md:hidden focus:outline-none"
-          onclick="toggleMenu()"
-        >
-          <i id="menuIcon" class="fas fa-bars"></i>
-        </button>
+        <img
+          src="assets/logo.png"
+          width="250px"
+          class="hidden sm:block"
+          alt="Logo"
+        />
+        <img src="assets/logo.png" width="180px" class="sm:hidden" alt="Logo" />
 
         <!-- Menu items for large screens -->
-        <div class="hidden md:flex">
+        <div class="hidden lg:flex">
           <ul class="flex items-center gap-6">
             <li><a href="#" class="hover:text-green-primary">Home</a></li>
             <li>
@@ -73,36 +75,46 @@
           </ul>
         </div>
 
-        <!-- Sign In & Request Appointment buttons -->
-        <div class="hidden md:flex items-center gap-4">
-          <a
-            href="#"
-            class="text-green-primary hover:underline hover:text-green-950"
-            >Sign In</a
+        <div class="flex items-center gap-4">
+          <!-- Sign In & Request Appointment buttons -->
+          <div class="hidden sm:flex items-center gap-4">
+            <a
+              href="#"
+              class="text-green-primary hover:underline hover:text-green-950"
+              >Sign In</a
+            >
+            <a
+              href="#"
+              class="text-white bg-green-primary px-4 py-2 rounded-xl hover:bg-green-900 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-200"
+              >Request Appointment</a
+            >
+          </div>
+
+          <!-- Mobile menu button (hamburger) -->
+          <button
+            class="text-3xl lg:hidden focus:outline-none text-green-primary"
+            onclick="toggleMenu()"
           >
-          <a
-            href="#"
-            class="text-white bg-green-primary px-4 py-2 rounded-xl hover:bg-green-900 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-200"
-            >Request Appointment</a
-          >
+            <i id="menuIcon" class="fas fa-bars"></i>
+          </button>
         </div>
       </div>
 
       <!-- Mobile Menu -->
-      <div id="navMenu" class="md:hidden hidden px-6 pt-4 py-8 slide-out">
+      <div id="navMenu" class="lg:hidden hidden px-6 pt-4 py-8 slide-out">
         <ul class="flex flex-col items-center gap-6">
           <li><a href="#" class="hover:text-green-primary">Home</a></li>
           <li><a href="#" class="hover:text-green-primary">Our Services</a></li>
           <li><a href="#" class="hover:text-green-primary">About Us</a></li>
           <li><a href="#" class="hover:text-green-primary">Contact</a></li>
-          <li>
+          <li class="sm:hidden">
             <a
               href="#"
               class="text-green-primary hover:underline hover:text-green-950"
               >Sign In</a
             >
           </li>
-          <li>
+          <li class="sm:hidden">
             <a
               href="#"
               class="text-white bg-green-primary px-6 py-4 rounded-xl hover:bg-green-900 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-200"
@@ -131,12 +143,12 @@
             young adults,<br class="lg:block hidden" />
             and students with a positive approach.
           </p>
-          <div class="text-center justify-center w-[375px]">
-            <form action="#" class="flex mt-6">
+          <div class="text-center justify-center lg:w-[375px]">
+            <form action="#" class="flex mt-6 justify-center">
               <div class="relative flex items-center">
                 <input
                   type="email"
-                  class="border-gray-300 border rounded-xl px-6 w-[300px] py-4 lg:w-[375px]"
+                  class="border-gray-300 border mx-auto justify-center rounded-xl px-6 w-[290px] py-4 lg:w-[375px] sm:w-[400px]"
                   placeholder="Enter email address"
                 />
                 <button
@@ -157,7 +169,11 @@
             </a>
           </div>
         </div>
-        <img src="assets/hero.png" class="mt-10 lg:mt-0" alt="" />
+        <img
+          src="assets/hero.png"
+          class="mt-10 lg:mt-0 sm:justify-center sm:mx-auto sm:text-center"
+          alt=""
+        />
       </div>
     </section>
 
@@ -225,7 +241,7 @@
     </section>
 
     <!-- about us -->
-    <section id="aboutUs" class="bgAboutUs content-center p-12">
+    <section id="aboutUs" class="bgAboutUs content-center p-4 sm:p-8 lg:p-12">
       <div
         class="bg-green-primary bg-opacity-50 rounded-3xl backdrop-blur-md p-4 lg:py-12 lg:px-24 container mx-auto"
       >

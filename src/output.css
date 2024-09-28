@@ -606,9 +606,15 @@ nav ul li a:hover {
 
 .services {
   height: 80px;
-  width: 200px;
+  width: 160px;
   align-content: center;
   align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .services {
+    width: 200px;
+  }
 }
 
 .services:nth-child(even) {
@@ -836,8 +842,8 @@ nav ul li a:hover {
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   }
   .btnPricingPrimary {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
   .btnPricingPrimary {
     padding-top: 1rem;
@@ -849,6 +855,12 @@ nav ul li a:hover {
   }
   .btnPricingPrimary:hover {
     text-decoration-line: underline;
+  }
+  @media (min-width: 1024px) {
+    .btnPricingPrimary {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
   }
   .pricelist {
     .listprice {
@@ -923,11 +935,21 @@ nav ul li a:hover {
 
 .privacy {
   a {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+  a {
     --tw-text-opacity: 1;
     color: rgb(39 85 85 / var(--tw-text-opacity));
   }
   a:hover {
     text-decoration-line: underline;
+  }
+  @media (min-width: 1024px) {
+    a {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
   }
 }
 
@@ -1027,12 +1049,12 @@ nav ul li a:hover {
   width: 250px;
 }
 
-.w-\[300px\] {
-  width: 300px;
+.w-\[290px\] {
+  width: 290px;
 }
 
-.w-\[375px\] {
-  width: 375px;
+.w-\[300px\] {
+  width: 300px;
 }
 
 .w-full {
@@ -1258,11 +1280,6 @@ nav ul li a:hover {
   line-height: 1.25rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -1477,13 +1494,45 @@ body {
   outline-offset: 2px;
 }
 
-@media (min-width: 768px) {
-  .md\:flex {
+@media (min-width: 640px) {
+  .sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:flex {
     display: flex;
   }
 
-  .md\:hidden {
+  .sm\:hidden {
     display: none;
+  }
+
+  .sm\:w-\[400px\] {
+    width: 400px;
+  }
+
+  .sm\:justify-center {
+    justify-content: center;
+  }
+
+  .sm\:p-8 {
+    padding: 2rem;
+  }
+
+  .sm\:text-center {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -1539,6 +1588,10 @@ body {
 
   .lg\:justify-between {
     justify-content: space-between;
+  }
+
+  .lg\:p-12 {
+    padding: 3rem;
   }
 
   .lg\:px-16 {

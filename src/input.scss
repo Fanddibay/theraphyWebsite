@@ -86,7 +86,7 @@ body {
   }
 
   .services {
-    @apply items-center  w-[200px]  h-[80px] content-center;
+    @apply items-center w-[160px]  lg:w-[200px]  h-[80px] content-center;
   }
   .services:nth-child(even) {
     @apply bg-green-secondary rounded text-white hover:bg-black-text;
@@ -152,7 +152,7 @@ body {
     }
 
     .btnPricingPrimary {
-      @apply bg-white text-green-primary rounded px-16 py-4   hover:underline;
+      @apply bg-white text-green-primary rounded px-12 lg:px-16 py-4   hover:underline;
     }
 
     .pricelist {
@@ -182,7 +182,7 @@ body {
 
   .privacy {
     a {
-      @apply text-green-primary hover:underline;
+      @apply text-green-primary hover:underline text-xs lg:text-base;
     }
   }
 }
