@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stepper Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/preline/1.9.0/preline.min.js"></script>
+  </head>
+  <body class="bg-gray-100 p-8">
+    <!-- Stepper -->
+    <div data-hs-stepper class="px-24 container mx-auto">
+      <!-- Stepper Nav -->
+      <!-- (Bagian ini tetap sama seperti kode asli) -->
+
+      <!-- Stepper Content -->
+      <div class="mt-5 sm:mt-8">
+        <form id="stepperForm">
+          <!-- First Content (Package) -->
+          <div
+            data-hs-stepper-content-item='{"index": 1}'
+            style="display: none"
+          >
+            <section id="pricing" class="my-12">
+              <!-- (Isi sesuai kode asli, tapi ubah input checkbox) -->
+              <div class="">
+                <div
+                  class="lg:flex gap-4 grid px-12 mx-auto justify-center mt-12"
+                >
+                  <!-- price 1 -->
+                  <div class="pricingWhite">
+                    <!-- (Isi sesuai kode asli) -->
+                    <div class="flex items-center gap-2">
+                      <input
+                        type="radio"
+                        name="package"
+                        value="Individual"
+                        class="btnPricingPrimary"
+                        id="choose1"
+                        required
+                      />
+                      <label for="choose1">Choose this package</label>
+                    </div>
+                  </div>
+                  <!-- Ulangi untuk price 2, 3, dan 4 dengan perubahan yang sama -->
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Second Content (Appointment) -->
+          <div
+            data-hs-stepper-content-item='{"index": 2}'
+            style="display: none"
+          >
+            <!-- (Isi sesuai kode asli) -->
+          </div>
+
+          <!-- Third Content (Personal Info) -->
+          <div
+            data-hs-stepper-content-item='{"index": 3}'
+            style="display: none"
+          >
+            <!-- (Isi sesuai kode asli) -->
+          </div>
+
+          <!-- Fourth Content (Payment) -->
+          <div
+            data-hs-stepper-content-item='{"index": 4}'
+            style="display: none"
+          >
+            <!-- (Isi sesuai kode asli) -->
+          </div>
+
+          <!-- Final Content -->
+          <div
+            data-hs-stepper-content-item='{"isFinal": true}'
+            style="display: none"
+          >
+            <div
+              id="finalContent"
+              class="p-4 bg-gray-50 border border-dashed border-gray-200 rounded-xl"
+            >
+              <h3 class="text-xl font-semibold mb-4">
+                Summary of Your Booking
+              </h3>
+              <!-- Data ringkasan akan diisi oleh JavaScript -->
+            </div>
+          </div>
+        </form>
+
+        <div class="mt-5 flex justify-between items-center gap-x-2">
+          <button
+            type="button"
+            class="py-2 px-3 inline-flex items-center gap-x-1 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+            data-hs-stepper-back-btn
+          >
+            <svg
+              class="shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+            Back
+          </button>
+          <button
+            type="button"
+            id="nextButton"
+            class="py-2 px-3 inline-flex items-center gap-x-1 text-sm font-medium rounded-lg border border-transparent bg-green-primary text-white hover:bg-green-600 focus:outline-none focus:bg-green-600 disabled:opacity-50 disabled:pointer-events-none"
+            data-hs-stepper-next-btn
+          >
+            Next
+            <svg
+              class="shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+          <button
+            type="submit"
+            id="submitButton"
+            class="py-2 px-3 inline-flex items-center gap-x-1 text-sm font-medium rounded-lg border border-transparent bg-green-primary text-white hover:bg-green-600 focus:outline-none focus:bg-green-600 disabled:opacity-50 disabled:pointer-events-none"
+            style="display: none"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("stepperForm");
+        const nextButton = document.getElementById("nextButton");
+        const submitButton = document.getElementById("submitButton");
+        const stepper = document.querySelector("[data-hs-stepper]");
+        let currentStepIndex = 1;
+
+        // Inisialisasi Flatpickr untuk input tanggal
+        flatpickr("#calendar", {
+          inline: true,
+          dateFormat: "Y-m-d",
+          onChange: function (selectedDates, dateStr, instance) {
+            document.getElementById("tanggal").value = dateStr;
+            updateJadwal(selectedDates[0]);
+          },
+        });
+
+        // Fungsi untuk mengupdate jadwal (sesuaikan dengan kebutuhan Anda)
+        function updateJadwal(date) {
+          // Implementasi logika untuk mengupdate jadwal
+        }
+
+        nextButton.addEventListener("click", function () {
+          if (currentStepIndex === 4) {
+            nextButton.style.display = "none";
+            submitButton.style.display = "inline-flex";
+          }
+          currentStepIndex++;
+        });
+
+        submitButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          // Kumpulkan semua data form
+          const formData = new FormData(form);
+          const summaryData = Object.fromEntries(formData.entries());
+
+          // Tampilkan ringkasan di final content
+          const finalContent = document.getElementById("finalContent");
+          finalContent.innerHTML = `
+                    <h3 class="text-xl font-semibold mb-4">Summary of Your Booking</h3>
+                    <p><strong>Package:</strong> ${summaryData.package}</p>
+                    <p><strong>Appointment Date:</strong> ${summaryData.tanggal}</p>
+                    <p><strong>Name:</strong> ${summaryData.floating_first_name} ${summaryData.floating_last_name}</p>
+                    <p><strong>Email:</strong> ${summaryData.floating_email}</p>
+                    <p><strong>Phone:</strong> ${summaryData.floating_phone}</p>
+                    <!-- Tambahkan informasi lain sesuai kebutuhan -->
+                `;
+
+          // Pindah ke final step
+          HSStaticMethods.hideActiveStepperContent(stepper);
+          HSStaticMethods.showStepperContent(stepper, "final");
+        });
+
+        // Inisialisasi Preline UI components
+        HSStaticMethods.autoInit();
+      });
+    </script>
+  </body>
+</html>

@@ -30,3 +30,32 @@ $(document).ready(function () {
     },
   });
 });
+
+const stepper = new HSStepper(document.querySelector("#stepper"));
+let errorState = 1;
+
+stepper.on("beforeNext", (index) => {
+  if (index === 2) {
+    stepper.setProcessedNavItem(index);
+
+    setTimeout(() => {
+      stepper.unsetProcessedNavItem(index);
+      stepper.enableButtons();
+
+      if (errorState) {
+        stepper.goToNext();
+      } else {
+        stepper.setErrorNavItem(index);
+      }
+
+      errorState = !errorState;
+    }, 2000);
+  }
+});
+
+document
+  .getElementById("credit-card-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    alert("Payment submitted!");
+  });

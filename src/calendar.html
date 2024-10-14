@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Therapy For Life</title>
+    <link rel="stylesheet" href="output.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+  </head>
+  <body>
+    <!-- Stepper -->
+    <div data-hs-stepper="" class="px-24 container mx-auto">
+      <!-- Stepper Nav -->
+      <div class="justify-center mx-auto text-center mt-12">
+        <ul
+          class="flex flex-row justify-center gap-x-12 text-center mx-auto px-32"
+        >
+          <!-- Item -->
+          <li
+            class="flex items-center gap-x-2 basis-0 flex-1 group active"
+            data-hs-stepper-nav-item='{
+        "index": 1,
+        "isOptional": true
+      }'
+          >
+            <span
+              class="min-w-7 min-h-7 group inline-flex items-center text-xs align-middle focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
+            >
+              <span
+                class="size-7 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full group-focus:bg-gray-200 hs-stepper-active:bg-green-primary hs-stepper-active:text-white hs-stepper-success:bg-yellow-primary hs-stepper-success:text-white hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600"
+              >
+                <span
+                  class="hs-stepper-success:hidden hs-stepper-completed:hidden"
+                  >1</span
+                >
+                <svg
+                  class="hidden shrink-0 size-3 hs-stepper-success:block"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span
+                class="ms-2 text-sm font-medium text-gray-800 group-focus:text-gray-500"
+              >
+                Package
+              </span>
+            </span>
+            <div
+              class="w-full h-px flex-1 bg-gray-200 group-last:hidden hs-stepper-success:bg-green-primary hs-stepper-completed:bg-teal-600"
+            ></div>
+          </li>
+          <!-- End Item -->
+          <!-- Item -->
+          <li
+            class="flex items-center gap-x-2 basis-0 flex-1 group active"
+            data-hs-stepper-nav-item='{
+        "index": 2,
+        "isOptional": true
+      }'
+          >
+            <span
+              class="min-w-7 min-h-7 group inline-flex items-center text-xs align-middle focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
+            >
+              <span
+                class="size-7 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full group-focus:bg-gray-200 hs-stepper-active:bg-green-primary hs-stepper-active:text-white hs-stepper-success:bg-yellow-primary hs-stepper-success:text-white hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600"
+              >
+                <span
+                  class="hs-stepper-success:hidden hs-stepper-completed:hidden"
+                  >2</span
+                >
+                <svg
+                  class="hidden shrink-0 size-3 hs-stepper-success:block"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span
+                class="ms-2 text-sm font-medium text-gray-800 group-focus:text-gray-500"
+              >
+                Appointment
+              </span>
+            </span>
+            <div
+              class="w-full h-px flex-1 bg-gray-200 group-last:hidden hs-stepper-success:bg-green-primary hs-stepper-completed:bg-teal-600"
+            ></div>
+          </li>
+          <!-- End Item -->
+
+          <!-- Item -->
+          <li
+            class="flex items-center gap-x-2 shrink basis-0 flex-1 group"
+            data-hs-stepper-nav-item='{
+        "index": 3,
+        "isOptional": true
+      }'
+          >
+            <span
+              class="min-w-7 min-h-7 group inline-flex items-center text-xs align-middle focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
+            >
+              <span
+                class="size-7 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full group-focus:bg-gray-200 hs-stepper-active:bg-green-primary hs-stepper-active:text-white hs-stepper-success:bg-yellow-primary hs-stepper-success:text-white hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600"
+              >
+                <span
+                  class="hs-stepper-success:hidden hs-stepper-completed:hidden"
+                  >3</span
+                >
+                <svg
+                  class="hidden shrink-0 size-3 hs-stepper-success:block"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span
+                class="ms-2 text-sm font-medium text-gray-800 group-focus:text-gray-500"
+              >
+                Personal Info
+              </span>
+            </span>
+            <div
+              class="w-full h-px flex-1 bg-gray-200 group-last:hidden hs-stepper-success:bg-green-primary hs-stepper-completed:bg-teal-600"
+            ></div>
+          </li>
+          <!-- End Item -->
+
+          <!-- Item -->
+          <li
+            class="flex items-center gap-x-2 shrink basis-0"
+            data-hs-stepper-nav-item='{
+        "index": 4
+      }'
+          >
+            <span
+              class="min-w-7 min-h-7 group inline-flex items-center text-xs align-middle focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
+            >
+              <span
+                class="size-7 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full group-focus:bg-gray-200 hs-stepper-active:bg-green-primary hs-stepper-active:text-white hs-stepper-success:bg-yellow-primary hs-stepper-success:text-white hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600"
+              >
+                <span
+                  class="hs-stepper-success:hidden hs-stepper-completed:hidden"
+                  >4</span
+                >
+                <svg
+                  class="hidden shrink-0 size-3 hs-stepper-success:block"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span
+                class="ms-2 text-sm font-medium text-gray-800 group-focus:text-gray-500"
+              >
+                Payment
+              </span>
+            </span>
+            <div
+              class="w-full h-px flex-1 bg-gray-200 group-last:hidden hs-stepper-success:bg-green-primary hs-stepper-completed:bg-teal-600"
+            ></div>
+          </li>
+          <!-- End Item -->
+        </ul>
+      </div>
+      <!-- End Stepper Nav -->
+
+      <!-- Stepper Content -->
+      <div class="mt-5 sm:mt-8">
+        <form action="stepperForm" id="stepperForm">
+          <!-- First Content -->
+          <div
+            data-hs-stepper-content-item='{
+      "index": 1
+    }'
+            style="display: none"
+          >
+            <div class="container mx-auto">
+              <div class="mx-auto text-center">
+                <p
+                  class="bg-[#DFE6E6] w-[110px] mx-auto rounded-full text-green-secondary text-sm px-4 py-2"
+                >
+                  Pricing plans
+                </p>
+                <h5 class="text-5xl font-semibold text-green-primary">
+                  Plans for Therapy
+                </h5>
+              </div>
+
+              <div class="">
+                <div
+                  action="#"
+                  class="lg:flex gap-4 grid px-12 mx-auto justify-center mt-12"
+                >
+                  <!-- price 1 -->
+                  <div class="pricingWhite">
+                    <div class="title">
+                      <h5>Individual</h5>
+                      <p>
+                        Focused, personalized sessions for anxiety, OCD, trauma,
+                        and performance.
+                      </p>
+                    </div>
+                    <h6 class="pricingFont">$175 - $200</h6>
+                    <div class="flex items-center gap-2">
+                      <input
+                        type="radio"
+                        name="package"
+                        class="btnPricingPrimary"
+                        id="Individual"
+                        value="Individual"
+                      />
+                      <label for="Individual">Choose this package</label>
+                    </div>
+                  </div>
+                  <!-- price 2 -->
+                  <div class="pricingWhite">
+                    <div class="title">
+                      <h5>Couples</h5>
+                      <p>
+                        Therapy for couples to enhance relationships and
+                        communication.
+                      </p>
+                    </div>
+                    <h6 class="pricingFont">$250 - $350</h6>
+                    <div class="flex items-center gap-2">
+                      <input
+                        type="radio"
+                        name="package"
+                        class="btnPricingPrimary"
+                        id="Couples"
+                        value="Couples"
+                      />
+                      <label for="Couples">Choose this package</label>
+                    </div>
+                  </div>
+                  <!-- price 3 -->
+                  <div class="pricingGreen">
+                    <div class="title">
+                      <h5>Consultation</h5>
+                      <p>
+                        Comprehensive consultations for anxiety, performance,
+                        and Emotional Support Animal (ESA)
+                      </p>
+                    </div>
+                    <h6 class="pricingFont">$150 - $200</h6>
+                    <div class="flex items-center gap-2">
+                      <input
+                        type="radio"
+                        name="package"
+                        class="btnPricingPrimary"
+                        id="Consultation"
+                        value="Consultation"
+                      />
+                      <label for="Consultation">Choose this package</label>
+                    </div>
+                  </div>
+                  <!-- price 4 -->
+                  <div class="pricingWhite">
+                    <div class="title">
+                      <h5>Life Coaching</h5>
+                      <p>Personal and professional growth coaching.</p>
+                    </div>
+                    <h6 class="pricingFont">$150 - $300</h6>
+                    <div class="flex items-center gap-2">
+                      <input
+                        type="radio"
+                        name="package"
+                        class="btnPricingPrimary"
+                        id="Coaching"
+                        value="Coaching"
+                      />
+                      <label for="Coaching">Choose this package</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End First Content -->
+
+          <!-- Second Content -->
+          <div
+            data-hs-stepper-content-item='{
+      "index": 2
+    }'
+            style="display: none"
+          >
+            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-6">
+              <h1 class="text-2xl font-bold mb-4">Form Pemesanan</h1>
+
+              <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/2">
+                  <label
+                    for="tanggal"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Pilih Tanggal</label
+                  >
+                  <div id="calendar" class="rounded-md overflow-hidden"></div>
+                  <input type="hidden" id="tanggal" name="tanggal" required />
+                </div>
+                <div class="w-full md:w-1/2">
+                  <h2 class="text-lg font-semibold mb-2">Jadwal Tersedia</h2>
+                  <div id="jadwal" class="border rounded-md p-4">
+                    <!-- Jadwal akan diisi oleh JavaScript -->
+                  </div>
+                </div>
+              </div>
+
+              <div id="message" class="mt-4 p-4 rounded-md hidden"></div>
+            </div>
+          </div>
+          <!-- End Second Content -->
+
+          <!-- Third Content -->
+          <div
+            data-hs-stepper-content-item='{
+      "index": 3
+    }'
+            style="display: none"
+          >
+            <div class="grid md:grid-cols-2 md:gap-6">
+              <div class="relative z-0 w-full mb-5 group">
+                <input
+                  type="text"
+                  name="floating_first_name"
+                  id="floating_first_name"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_first_name"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >First name</label
+                >
+              </div>
+              <div class="relative z-0 w-full mb-5 group">
+                <input
+                  type="text"
+                  name="floating_last_name"
+                  id="floating_last_name"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_last_name"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >Last name</label
+                >
+              </div>
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="text"
+                name="username"
+                id="username"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+                required
+              />
+              <label
+                for="floating_company"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >Username</label
+              >
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="email"
+                name="floating_email"
+                id="floating_email"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+                required
+              />
+              <label
+                for="floating_email"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >Email address</label
+              >
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="tel"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                name="floating_phone"
+                id="floating_phone"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+                required
+              />
+              <label
+                for="floating_phone"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >Phone number (123-456-7890)</label
+              >
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="password"
+                name="floating_password"
+                id="floating_password"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+                required
+              />
+              <label
+                for="floating_password"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >Password</label
+              >
+            </div>
+
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="password"
+                name="repeat_password"
+                id="floating_repeat_password"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+                required
+              />
+              <label
+                for="floating_repeat_password"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >Confirm password</label
+              >
+            </div>
+          </div>
+          <!-- End Third Content -->
+          <!-- Four Content -->
+          <div
+            data-hs-stepper-content-item='{
+    "index": 4
+  }'
+            style="display: none"
+          >
+            <!-- Credit Card Input -->
+            <div class="mb-4">
+              <label
+                for="credit_card"
+                class="block text-sm font-medium text-gray-700 mb-2"
+                >Credit Card Number</label
+              >
+              <div class="relative">
+                <input
+                  type="text"
+                  id="credit_card"
+                  name="credit_card"
+                  maxlength="16"
+                  placeholder="1234 5678 9012 3456"
+                  class="w-full border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 pl-10 p-2.5 shadow-sm"
+                />
+                <i
+                  class="fas fa-credit-card absolute left-3 top-3 text-gray-400"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Expiry Date Input -->
+            <div class="mb-4">
+              <label
+                for="expiry_date"
+                class="block text-sm font-medium text-gray-700 mb-2"
+                >Expiry Date</label
+              >
+              <div class="relative">
+                <input
+                  type="text"
+                  id="expiry_date"
+                  maxlength="5"
+                  name="expiry_date"
+                  placeholder="MM/YY"
+                  class="w-full border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 pl-10 p-2.5 shadow-sm"
+                />
+                <i
+                  class="far fa-calendar-alt absolute left-3 top-3 text-gray-400"
+                ></i>
+              </div>
+            </div>
+
+            <!-- CCV Input -->
+            <div class="mb-6">
+              <label
+                for="ccv"
+                class="block text-sm font-medium text-gray-700 mb-2"
+                >CCV</label
+              >
+              <div class="relative">
+                <input
+                  type="text"
+                  id="ccv"
+                  name="ccv"
+                  maxlength="3"
+                  placeholder="123"
+                  class="w-full border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 pl-10 p-2.5 shadow-sm"
+                />
+                <i class="fas fa-lock absolute left-3 top-3 text-gray-400"></i>
+              </div>
+            </div>
+          </div>
+          <!-- End Four Content -->
+
+          <!-- Final Content -->
+          <div
+            id="finalContent"
+            data-hs-stepper-content-item='{
+  "isFinal": true
+}'
+            style="display: none"
+          >
+            <div
+              class="p-4 bg-gray-50 border border-dashed border-gray-200 rounded-xl"
+            >
+              <!-- Summary content will be inserted here -->
+            </div>
+          </div>
+          <!-- End Final Content -->
+        </form>
+
+        <div class="mt-5 flex justify-between items-center gap-x-2">
+          <button
+            type="button"
+            class="py-2 px-3 inline-flex items-center gap-x-1 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+            data-hs-stepper-back-btn
+          >
+            <svg
+              class="shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+            Back
+          </button>
+          <button
+            type="button"
+            id="nextButton"
+            class="py-2 px-3 inline-flex items-center gap-x-1 text-sm font-medium rounded-lg border border-transparent bg-green-primary text-white hover:bg-green-600 focus:outline-none focus:bg-green-600 disabled:opacity-50 disabled:pointer-events-none"
+            data-hs-stepper-next-btn
+          >
+            Next
+            <svg
+              class="shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+          <button
+            type="submit"
+            id="submitButton"
+            form="stepperForm"
+            class="py-2 px-3 inline-flex items-center gap-x-1 text-sm font-medium rounded-lg border border-transparent bg-green-primary text-white hover:bg-green-600 focus:outline-none focus:bg-green-600 disabled:opacity-50 disabled:pointer-events-none"
+            style="display: none"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+      <!-- End Stepper Content -->
+    </div>
+    <!-- Stepper -->
+  </body>
+
+  <!-- javascript -->
+  <!-- <script src="main.js"></script> -->
+
+  <script src="main.js"></script>
+
+  <script src="/node_modules/preline/dist/preline.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const tanggalInput = document.getElementById("tanggal");
+      const calendarDiv = document.getElementById("calendar");
+      const jadwalDiv = document.getElementById("jadwal");
+      const messageDiv = document.getElementById("message");
+      const form = document.getElementById("stepperForm");
+      const nextButton = document.getElementById("nextButton");
+      const submitButton = document.getElementById("submitButton");
+      const stepper = document.querySelector("[data-hs-stepper]");
+      const finalContent = document.getElementById("finalContent");
+      const stepperItems = document.querySelectorAll(
+        "[data-hs-stepper-content-item]"
+      );
+
+      let currentStepIndex = 1;
+
+      const fp = flatpickr(calendarDiv, {
+        inline: true,
+        dateFormat: "Y-m-d",
+        minDate: "today",
+        disable: [
+          function (date) {
+            return date.getDay() === 0 || date.getDay() === 6;
+          },
+        ],
+        onChange: function (selectedDates, dateStr, instance) {
+          tanggalInput.value = dateStr;
+          updateJadwal(selectedDates[0]);
+        },
+      });
+
+      function updateJadwal(date) {
+        const hari = date.getDay();
+        let jamMulai = 21; // 9 PM
+        let jamSelesai = 24; // 12 AM (tengah malam)
+
+        // Menambahkan 1 jam untuk setiap hari setelah Senin
+        jamMulai += hari - 1;
+        jamSelesai += hari - 1;
+
+        let jadwalHTML = '<ul class="space-y-2">';
+        for (let jam = jamMulai; jam < jamSelesai; jam++) {
+          const jamFormatted = jam % 24; // Menghandle kasus di atas 24 jam
+          jadwalHTML += `<li class="flex items-center">
+                <input type="radio" id="jam_${jamFormatted}" name="jadwal" value="${jamFormatted}" class="mr-2" required>
+                <label for="jam_${jamFormatted}">${jamFormatted}:00 - ${
+            (jamFormatted + 1) % 24
+          }:00</label>
+            </li>`;
+        }
+        jadwalHTML += "</ul>";
+
+        jadwalDiv.innerHTML = jadwalHTML;
+      }
+
+      // Function to validate form inputs before moving to the next step
+      function validateCurrentStep() {
+        let isValid = true;
+
+        // Example validation: ensure that all required inputs are filled
+        const requiredInputs = form.querySelectorAll(
+          `[data-hs-stepper-content-item="${currentStepIndex}"] input[required], 
+       [data-hs-stepper-content-item="${currentStepIndex}"] select[required], 
+       [data-hs-stepper-content-item="${currentStepIndex}"] textarea[required]`
+        );
+
+        requiredInputs.forEach((input) => {
+          if (!input.value || !input.checkValidity()) {
+            input.classList.add("border-red-500"); // Add error style
+            isValid = false;
+          } else {
+            input.classList.remove("border-red-500"); // Remove error style
+          }
+        });
+
+        return isValid;
+      }
+
+      nextButton.addEventListener("click", function () {
+        // Validate the current step before proceeding
+        if (!validateCurrentStep()) {
+          messageDiv.innerHTML =
+            '<p class="text-red-500">Please fill in all required fields before proceeding.</p>';
+          return;
+        } else {
+          messageDiv.innerHTML = ""; // Clear error messages if validation is passed
+        }
+
+        currentStepIndex++;
+
+        if (currentStepIndex === 4) {
+          nextButton.style.display = "none";
+          submitButton.style.display = "inline-flex";
+        }
+      });
+
+      // Function to get selected package
+      function getSelectedPackage() {
+        const selectedPackage = document.querySelector(
+          'input[name="package"]:checked'
+        );
+        return selectedPackage ? selectedPackage.value : "N/A";
+      }
+
+      submitButton.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        if (form) {
+          const formData = new FormData(form);
+          const summaryData = Object.fromEntries(formData.entries());
+
+          if (finalContent) {
+            finalContent.innerHTML = `
+          <div class="p-4 bg-gray-50 border border-gray-200 rounded-xl">
+            <h3 class="text-xl font-semibold mb-4">Summary of Your Booking</h3>
+            <p><strong>Package:</strong> ${summaryData.package || "N/A"}</p>
+            <p><strong>Appointment Date:</strong> ${
+              summaryData.tanggal || "N/A"
+            }</p>
+            <p><strong>Time</strong> ${summaryData.jadwal || "N/A"}</p>
+            <p><strong>Credit Card</strong> ${
+              summaryData.credit_card || "N/A"
+            }</p>
+            <p><strong>Name:</strong> ${
+              summaryData.floating_first_name || ""
+            } ${summaryData.floating_last_name || "N/A"}</p>
+            <p><strong>Email:</strong> ${
+              summaryData.floating_email || "N/A"
+            }</p>
+            <p><strong>Phone:</strong> ${
+              summaryData.floating_phone || "N/A"
+            }</p>
+             <!-- Payment Information -->
+            <h3 class="text-xl font-semibold mt-4">Payment Information</h3>
+            <p><strong>Credit Card:</strong> **** **** **** ${
+              summaryData.credit_card.slice(-4) || "N/A"
+            }</p>
+            <p><strong>Expiry Date:</strong> ${
+              summaryData.expiry_date || "N/A"
+            }</p>
+            <p><strong>CCV:</strong> * ${
+              summaryData.expiry_date.slice(-2) || "N/A"
+            }
+              </p> <!-- Masked for security -->
+            <!-- Tambahkan informasi lain sesuai kebutuhan -->
+            
+          </div>
+        `;
+
+            // Hide all other steps and show final content
+            stepperItems.forEach((item) => {
+              if (item !== finalContent) {
+                item.style.display = "none";
+              }
+            });
+            finalContent.style.display = "block";
+
+            // Hide navigation buttons
+            submitButton.style.display = "none";
+            const backButton = document.querySelector(
+              "[data-hs-stepper-back-btn]"
+            );
+            const nextButton = document.querySelector(
+              "[data-hs-stepper-next-btn]"
+            );
+            if (backButton) backButton.style.display = "none";
+            if (nextButton) nextButton.style.display = "none";
+          }
+        } else {
+          console.error("Form not found");
+        }
+      });
+
+      // Inisialisasi Preline UI components
+      HSStaticMethods.autoInit();
+    });
+  </script>
+</html>
